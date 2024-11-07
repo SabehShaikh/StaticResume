@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -12,24 +19,25 @@
       <div class="header">
         <h1>Sabeh Shaikh</h1>
         <h2>Mern Stack Developer</h2>
+        <img src="images/mypic.png" alt="Sabeh Shaikh" class="profile-img" />
       </div>
 
       <!-- Contact Info -->
       <div class="contact-info">
-        <p>Phone: +92-3343764437 | Location: Gulistan-e-Johar</p>
+        <p>📞 +92-3343764437 | 📍 Gulistan-e-Johar</p>
 
         <p>
-          LinkedIn:
+          LinkedIn: <i class="fab fa-linkedin"></i>
           <a href="https://www.linkedin.com/in/sabeh-shaikh/" target="_blank"
             >linkedin.com/in/sabeh</a
           >
-          | GitHub:
+          GitHub: <i class="fab fa-github"></i>
           <a href="https://github.com/SabehShaikh" target="_blank"
             >github.com/sabeh</a
           >
         </p>
         <p>
-          Email:
+          Email: ✉️
           <a href="mailto:sabehshaikh201@gmail.com">sabehshaikh201@gmail.com</a>
         </p>
       </div>
@@ -46,11 +54,18 @@
         </p>
       </div>
 
-      <hr />
+      <!-- Languages Section -->
+      <section class="languages-section">
+        <h3><i class="fas fa-language"></i> Languages:</h3>
+        <ul class="languages-list">
+          <li>English – Fluent</li>
+          <li>Urdu – Native</li>
+        </ul>
+      </section>
 
       <!-- Skills -->
       <section class="skills-section">
-        <h3>Skills:</h3>
+        <h3><i class="fas fa-cogs"></i> Skills:</h3>
         <ul class="skills-list">
           <li>HTML 5</li>
           <li>CSS 3</li>
@@ -58,102 +73,87 @@
           <li>React</li>
           <li>Node.js</li>
           <li>Git</li>
+          <li>Firebase</li>
           <li>Python</li>
           <li>TypeScript</li>
           <li>C Language</li>
           <li>Responsive Design</li>
-          <li>Firebase</li>
           <li>API Integration</li>
         </ul>
       </section>
 
-      <hr />
-
       <!-- Education -->
       <section class="education-section section">
-        <h3>Education:</h3>
-        <div class="right">
-          <ul>
-            <li>
-              <strong
-                >Federal Urdu University of Arts, Sciences & Technology</strong
-              ><br />Bachelor of Science in Computer Science<br />2023 - Present
-            </li>
-            <li>
-              <strong
-                >GOVERNOR SINDH INITIATIVE FOR AI, WEB 3.0 & METAVERSE</strong
-              ><br />Generative AI Engineer<br />2024 - Present
-            </li>
-            <li>
-              <strong>SAYLANI MASS IT TRAINING</strong><br />Full Stack Web
-              Development<br />Dec 2022 - Dec 2023
-            </li>
-          </ul>
-        </div>
+        <h3><i class="fas fa-graduation-cap"></i> Education:</h3>
+        <ul class="line">
+          <li>
+            <strong>Federal Urdu University of Arts, Sciences & Technology</strong><br />
+            Bachelor of Science in Computer Science<br />
+            <span class="year">2023 - Present</span>
+          </li>
+          <li>
+            <strong>GOVERNOR SINDH INITIATIVE FOR AI, WEB 3.0 & METAVERSE</strong><br />
+            Generative AI Engineer<br />
+            <span class="year">2024 - Present</span>
+          </li>
+          <li>
+            <strong>SAYLANI MASS IT TRAINING</strong><br />
+            Full Stack Web Development<br />
+            <span class="year">Dec 2022 - Dec 2023</span>
+          </li>
+        </ul>
       </section>
-
-      <hr />
-
       <!-- Experience -->
-      <section class="experience-section section">
-        <h3>Experience:</h3>
-        <div class="right">
-          <ul>
-            <li>
-              <strong>CodeSoft</strong><br />Remote Web Developer Intern<br />Sept
-              20 - Oct 20, 2023<br />Worked on developing modern web
-              applications using HTML, CSS, and JavaScript.
-            </li>
-            <li>
-              <strong>TechnoHacks</strong><br />Remote Web Developer Intern<br />Oct
-              1 - Oct 30, 2023<br />Assisted in building responsive websites
-              using HTML, CSS, and JavaScript, ensuring cross-browser
-              compatibility.
-            </li>
-          </ul>
-        </div>
-      </section>
+<section class="experience-section section">
+  <h3><i class="fas fa-briefcase"></i> Experience:</h3>
+  <ul class="line">
+    <li>
+      <strong>CodeSoft</strong><br />
+      Remote Web Developer Intern<br />
+      <span class="year">Sept 20 - Oct 20, 2023</span><br />
+      Worked on developing modern web applications using HTML, CSS, and JavaScript.
+    </li>
+    <li>
+      <strong>TechnoHacks</strong><br />
+      Remote Web Developer Intern<br />
+      <span class="year">Oct 1 - Oct 30, 2023</span><br />
+      Assisted in building responsive websites ensuring cross-browser compatibility.
+    </li>
+  </ul>
+</section>
 
-      <hr />
+<!-- Button to Show/Hide Projects -->
+<button id="toggleProjectsBtn">
+  <i class="fas fa-chevron-down"></i> Show More
+</button>
 
-      <!-- Button to Show/Hide Projects -->
-      <button id="toggleProjectsBtn">Show More</button>
-
-      <!-- Projects -->
-      <section class="projects-section section" id="projectsList">
-        <h3>Projects:</h3>
-        <div class="right">
-          <ul>
-            <li>
-              <strong>CURRENCY CONVERTER</strong><br /><a
-                href="https://exchangeratebysabeh.netlify.app/"
-                >https://exchangeratebysabeh.netlify.app/</a
-              >
-              <br />
-              <span>Real-time exchange rates, Easy currency selection.</span>
-            </li>
-            <li>
-              <strong>WEATHER APP</strong><br /><a
-                href="https://weatherappsabeh.netlify.app/"
-                >https://weatherappsabeh.netlify.app/</a
-              >
-              <br />
-              <span>Real-time weather updates, User Friendly Interface.</span>
-            </li>
-            <li>
-              <strong>QUIZ APP</strong><br /><a
-                href="https://quizappsabeh.netlify.app/"
-                >https://quizappsabeh.netlify.app/</a
-              >
-              <br />
-              <span
-                >Engage in a knowledge-testing experience, enhance your
-                understanding of web development.</span
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
+<!-- Projects -->
+<section class="projects-section section" id="projectsList">
+  <h3><i class="fas fa-folder-open"></i> Projects:</h3>
+  <ul class="line">
+    <li>
+      <strong>CURRENCY CONVERTER</strong><br />
+      <a href="https://exchangeratebysabeh.netlify.app/" target="_blank">
+        https://exchangeratebysabeh.netlify.app/
+      </a><br />
+      <span>Real-time exchange rates, Easy currency selection.</span>
+    </li>
+    <li>
+      <strong>WEATHER APP</strong><br />
+      <a href="https://weatherappsabeh.netlify.app/" target="_blank">
+        https://weatherappsabeh.netlify.app/
+      </a><br />
+      <span>Real-time weather updates, User-Friendly Interface.</span>
+    </li>
+    <li>
+      <strong>QUIZ APP</strong><br />
+      <a href="https://quizappsabeh.netlify.app/" target="_blank">
+        https://quizappsabeh.netlify.app/
+      </a><br />
+      <span>Engage in knowledge-testing experiences, enhance your web dev skills.</span>
+    </li>
+  </ul>
+</section>
     </div>
 
     <!-- Link to compiled TypeScript file -->

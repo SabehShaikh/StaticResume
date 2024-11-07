@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 
 body {
   font-family: "Poppins", Arial, sans-serif;
@@ -22,10 +24,21 @@ body {
   overflow: hidden;
 }
 
-/* Header - Name and Job Role */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
 .header {
   text-align: center;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .header h1 {
@@ -35,103 +48,196 @@ body {
 }
 
 .header h2 {
-  font-size: 1.8em;
-  margin: 10px 0;
+  font-size: 1.6em;
+  margin: 8px 0;
   color: #555;
 }
 
 /* Contact Info */
 .contact-info {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
+.contact-info i {
+  margin-right: 4px;
+  /* Adds space between icon and text */
+}
 
 .contact-info p {
-    margin: 2px 0px;
-    font-size: 1.1em;
+  margin: 2px 0px;
+  font-size: 1.1em;
 }
 
 a {
-    color: #1a73e8;
-    text-decoration: none;
-    font-weight: bold;
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 
 /* About Me */
 .about-me {
   text-align: center;
   font-size: 1.2em;
   margin-bottom: 30px;
+  padding: 10px;
 }
 
 .about-me p {
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.6;
-  color: #444;
+  line-height: 1.5;
+  color: #333;
+}
+
+
+/* Languages Section */
+
+.languages-section {
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  /* Light background for contrast */
+  border-radius: 8px;
+}
+
+.languages-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+.languages-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.languages-list li {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 1.1em;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.languages-list li:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.languages-section i,
+.skills-section i {
+  margin-right: 10px;
+  /* Space between icon and text */
+  color: #008080;
+  /* Icon color */
 }
 
 /* Skills Section */
 .skills-section {
   margin-bottom: 30px;
+  padding: 10px;
 }
 
 .skills-section h3 {
-  font-size: 1.7em;
+  font-size: 1.5em;
   margin-bottom: 20px;
   color: #333;
-
+  font-weight: 600;
+  padding-bottom: 5px;
   padding-bottom: 5px;
 }
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columns */
   gap: 15px;
   list-style-type: none;
   padding-left: 0;
   margin: 0;
 }
 
+
 .skills-list li {
-  padding: 5px;
+  padding: 8px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f1f1f1;
   text-align: center;
   font-size: 1.1em;
   color: #333;
+  font-weight: 500;
+  /* Makes the text slightly bolder */
+
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .skills-list li:hover {
   background-color: #e0e0e0;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Flex Layout for Sections */
-.section {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px;
-}
-
-.section h3 {
-  flex: 0 0 220px; /* Adjust width based on your needs */
-  font-size: 1.6em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.section .right {
-  flex: 1;
+/* Style for section dividers */
+.line {
+  border-left: 3px solid #008080;
   padding-left: 20px;
+  margin-left: 10px;
+  list-style-type: none;
+}
+
+.line li {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+strong {
+  font-weight: 600;
+  color: #008080;
+  font-size: 1.1em;
+}
+
+.year {
+  font-style: italic;
+  color: #555;
+}
+
+section {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 2px;
+
+}
+
+section h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5em;
+  font-weight: 600;
+
 }
 
 .section ul {
@@ -141,78 +247,113 @@ a:hover {
 }
 
 .section li {
-  margin-bottom: 20px; /* Space between items */
+  margin-bottom: 20px;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1em;
+
 }
 
-/* HR Styling */
-hr {
-  border: 0;
-  border-top: 2px solid #ddddddd4;
-  margin: 30px 0;
-  border-radius: 2px;
+/* Style the icons in section headers */
+section h3 i {
+  margin-right: 10px;
+  color: #008080;
+  font-size: 1.3em;
+
 }
-/* Center the button */
+
+/* Add hover effect for the icons */
+section h3 i:hover {
+  color: #006666;
+  /* Dark teal on hover */
+}
+
+
 button {
-    display: block;
-    margin: 20px auto;
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto;
+  background-color: #006666;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0c59d6;
+  background-color: #004c4c;
 }
 
 /* Hide projects initially */
 #projectsList {
-    display: none;
+  display: none;
 }
+
+
+.projects-section a {
+  color: #006666;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.projects-section a:hover {
+  color: #004c4c;
+  text-decoration: underline;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
   .header h1 {
-    font-size: 2.5em;
-  }
-  .skills-list {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
-  }
 
-  .section {
-    display: inline-block;
-  }
-
-  .section h3 {
-    margin-bottom: 15px;
-  }
-
-  .section .right {
-    padding-left: 0;
-  }
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .header h1 {
     font-size: 2em;
     margin: 0;
     color: #333;
   }
 
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on small screens */
+  }
+
+  .section {
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  .section h3 {
+    font-size: 1.4em;
+  }
+
+  .section li {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 18px;
+  }
+
+  .projects-section a {
+    font-size: 0.9em;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+
+
   .header h2 {
-    font-size: 1.6em;
+    font-size: 1.2em;
     margin: 10px 0;
     color: #555;
   }
@@ -222,25 +363,64 @@ button:hover {
     font-size: 1em;
   }
 
+
   .about-me p {
-    font-size: 1em;
+    font-size: 16px;
   }
 
   .skills-list li {
     font-size: 1em;
   }
 
-  .section h3 {
-    font-size: 1.5em;
+  .languages-list li {
+    font-size: 1em;
   }
 
-  hr {
-    margin: 15px 0;
+  /* Adjust section headings for smaller devices */
+  .projects-section h3,
+  .experience-section h3,
+  .education-section h3 {
+    font-size: 1.3em;
   }
+
   a {
     font-size: 0.8em;
   }
-
-  
 }
 
+
+
+
+@media (max-width: 480px) {
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-info p:nth-child(2) {
+    margin: 5px 23px;
+
+  }
+
+  button {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+
+  .projects-section a {
+    font-size: 0.85em;
+  }
+
+  .about-me p {
+    font-size: 15px;
+  }
+
+  .skills-list li {
+    font-size: 0.9em;
+  }
+
+  .languages-list li {
+    font-size: 0.9em;
+  }
+}
